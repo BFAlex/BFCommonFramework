@@ -16,6 +16,7 @@
 		4A2490BE2079B959007C6597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2490BC2079B959007C6597 /* LaunchScreen.storyboard */; };
 		4A2490C92079BB5B007C6597 /* BFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490C82079BB5B007C6597 /* BFNetworkManager.m */; };
 		4A2490CD2079BBDE007C6597 /* BFNetworkSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490CC2079BBDE007C6597 /* BFNetworkSocket.m */; };
+		4A2490D1207A16BD007C6597 /* BFEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490D0207A16BD007C6597 /* BFEncryption.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		4A2490C82079BB5B007C6597 /* BFNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFNetworkManager.m; sourceTree = "<group>"; };
 		4A2490CB2079BBDE007C6597 /* BFNetworkSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFNetworkSocket.h; sourceTree = "<group>"; };
 		4A2490CC2079BBDE007C6597 /* BFNetworkSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFNetworkSocket.m; sourceTree = "<group>"; };
+		4A2490CF207A16BD007C6597 /* BFEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFEncryption.h; sourceTree = "<group>"; };
+		4A2490D0207A16BD007C6597 /* BFEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFEncryption.m; sourceTree = "<group>"; };
 		843D7ACA2366A0D985B5293E /* Pods-BFCommonFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFCommonFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFCommonFramework/Pods-BFCommonFramework.release.xcconfig"; sourceTree = "<group>"; };
 		F6DBC13E6C27F57B782E2F2A /* Pods-BFCommonFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFCommonFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFCommonFramework/Pods-BFCommonFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +83,7 @@
 		4A2490AD2079B959007C6597 /* BFCommonFramework */ = {
 			isa = PBXGroup;
 			children = (
+				4A2490CE207A1652007C6597 /* Encryption */,
 				4A2490C52079BA78007C6597 /* BFNetwork */,
 				4A2490B12079B959007C6597 /* AppDelegate.h */,
 				4A2490B22079B959007C6597 /* AppDelegate.m */,
@@ -120,6 +124,15 @@
 				4A2490CC2079BBDE007C6597 /* BFNetworkSocket.m */,
 			);
 			path = BFSocket;
+			sourceTree = "<group>";
+		};
+		4A2490CE207A1652007C6597 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				4A2490CF207A16BD007C6597 /* BFEncryption.h */,
+				4A2490D0207A16BD007C6597 /* BFEncryption.m */,
+			);
+			path = Encryption;
 			sourceTree = "<group>";
 		};
 		72AB87C1E73CE59834265362 /* Pods */ = {
@@ -257,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2490D1207A16BD007C6597 /* BFEncryption.m in Sources */,
 				4A2490B62079B959007C6597 /* ViewController.m in Sources */,
 				4A2490B32079B959007C6597 /* AppDelegate.m in Sources */,
 				4A2490C92079BB5B007C6597 /* BFNetworkManager.m in Sources */,

@@ -54,6 +54,11 @@ NSString *const BFNetworkSocketQueueName = @"BFNetworkSocketQueue";
     NSLog(@"主动断开服务器连接");
 }
 
+- (void)writeData:(NSData *)data {
+    
+    [_asyncSocket writeData:data withTimeout:TIMEOUT_JSON_WRITE_STREAM tag:TAG_JSON_READ_STREAM];
+}
+
 #pragma mark - Private
 #pragma mark Queue
 - (void)setupNetworkSocketQueue {
@@ -72,16 +77,23 @@ NSString *const BFNetworkSocketQueueName = @"BFNetworkSocketQueue";
 
 #pragma mark - GCDAsyncSocketDelegate
 
-- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
-    NSLog(@"didConnectToHost(host:%@, port:%d)", host, port);
-}
-
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
     NSLog(@"socketDidDisconnect -> err:%@", err);
+    
+}
+
+- (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port {
+    NSLog(@"didConnectToHost(host:%@, port:%d)", host, port);
+    
+    // 开始读数据
+    [_asyncSocket readDataWithTimeout:TIMEOUT_JSON_READ_STREAM tag:TAG_JSON_READ_STREAM];
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     NSLog(@"didReadData:%@, tag:%ld", data, tag);
+    
+    // 持续读数据
+    [_asyncSocket readDataWithTimeout:TIMEOUT_JSON_READ_STREAM tag:TAG_JSON_READ_STREAM];
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {

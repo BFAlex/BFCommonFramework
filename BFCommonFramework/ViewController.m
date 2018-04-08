@@ -20,7 +20,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [[BFNetworkManager sharedInstance] connectToDefaultTargetServer];
-    [self performSelector:@selector(disconnectToServer) withObject:nil afterDelay:10];
+//    [self performSelector:@selector(disconnectToServer) withObject:nil afterDelay:10];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [[BFNetworkManager sharedInstance] loginDefaultAccount];
 }
 
 - (void)disconnectToServer {
