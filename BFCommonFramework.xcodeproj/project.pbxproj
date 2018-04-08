@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0075046E185BFCD863C15BFB /* libPods-BFCommonFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A62826CF13088BA6D1157FD /* libPods-BFCommonFramework.a */; };
 		4A2490B02079B959007C6597 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490AF2079B959007C6597 /* main.m */; };
 		4A2490B32079B959007C6597 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490B22079B959007C6597 /* AppDelegate.m */; };
 		4A2490B62079B959007C6597 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490B52079B959007C6597 /* ViewController.m */; };
 		4A2490B92079B959007C6597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2490B72079B959007C6597 /* Main.storyboard */; };
 		4A2490BB2079B959007C6597 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2490BA2079B959007C6597 /* Assets.xcassets */; };
 		4A2490BE2079B959007C6597 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2490BC2079B959007C6597 /* LaunchScreen.storyboard */; };
+		4A2490C92079BB5B007C6597 /* BFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490C82079BB5B007C6597 /* BFNetworkManager.m */; };
+		4A2490CD2079BBDE007C6597 /* BFNetworkSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2490CC2079BBDE007C6597 /* BFNetworkSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A62826CF13088BA6D1157FD /* libPods-BFCommonFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BFCommonFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2490AB2079B959007C6597 /* BFCommonFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BFCommonFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2490AF2079B959007C6597 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A2490B12079B959007C6597 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +30,13 @@
 		4A2490BA2079B959007C6597 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2490BD2079B959007C6597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2490BF2079B959007C6597 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A2490C62079BAFE007C6597 /* BFNReadMe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BFNReadMe.h; sourceTree = "<group>"; };
+		4A2490C72079BB5B007C6597 /* BFNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFNetworkManager.h; sourceTree = "<group>"; };
+		4A2490C82079BB5B007C6597 /* BFNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFNetworkManager.m; sourceTree = "<group>"; };
+		4A2490CB2079BBDE007C6597 /* BFNetworkSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFNetworkSocket.h; sourceTree = "<group>"; };
+		4A2490CC2079BBDE007C6597 /* BFNetworkSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFNetworkSocket.m; sourceTree = "<group>"; };
+		843D7ACA2366A0D985B5293E /* Pods-BFCommonFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFCommonFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFCommonFramework/Pods-BFCommonFramework.release.xcconfig"; sourceTree = "<group>"; };
+		F6DBC13E6C27F57B782E2F2A /* Pods-BFCommonFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFCommonFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFCommonFramework/Pods-BFCommonFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +44,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0075046E185BFCD863C15BFB /* libPods-BFCommonFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46B7FE1EF6A743B80E43EA1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A62826CF13088BA6D1157FD /* libPods-BFCommonFramework.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A2490A22079B94A007C6597 = {
 			isa = PBXGroup;
 			children = (
 				4A2490AD2079B959007C6597 /* BFCommonFramework */,
 				4A2490AC2079B959007C6597 /* Products */,
+				72AB87C1E73CE59834265362 /* Pods */,
+				46B7FE1EF6A743B80E43EA1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +80,7 @@
 		4A2490AD2079B959007C6597 /* BFCommonFramework */ = {
 			isa = PBXGroup;
 			children = (
+				4A2490C52079BA78007C6597 /* BFNetwork */,
 				4A2490B12079B959007C6597 /* AppDelegate.h */,
 				4A2490B22079B959007C6597 /* AppDelegate.m */,
 				4A2490B42079B959007C6597 /* ViewController.h */,
@@ -79,6 +102,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4A2490C52079BA78007C6597 /* BFNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A2490C62079BAFE007C6597 /* BFNReadMe.h */,
+				4A2490CA2079BB84007C6597 /* BFSocket */,
+				4A2490C72079BB5B007C6597 /* BFNetworkManager.h */,
+				4A2490C82079BB5B007C6597 /* BFNetworkManager.m */,
+			);
+			path = BFNetwork;
+			sourceTree = "<group>";
+		};
+		4A2490CA2079BB84007C6597 /* BFSocket */ = {
+			isa = PBXGroup;
+			children = (
+				4A2490CB2079BBDE007C6597 /* BFNetworkSocket.h */,
+				4A2490CC2079BBDE007C6597 /* BFNetworkSocket.m */,
+			);
+			path = BFSocket;
+			sourceTree = "<group>";
+		};
+		72AB87C1E73CE59834265362 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6DBC13E6C27F57B782E2F2A /* Pods-BFCommonFramework.debug.xcconfig */,
+				843D7ACA2366A0D985B5293E /* Pods-BFCommonFramework.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A2490C22079B959007C6597 /* Build configuration list for PBXNativeTarget "BFCommonFramework" */;
 			buildPhases = (
+				F6927E97F2B49C692BE52E87 /* [CP] Check Pods Manifest.lock */,
 				4A2490A72079B94A007C6597 /* Sources */,
 				4A2490A82079B94A007C6597 /* Frameworks */,
 				4A2490A92079B94A007C6597 /* Resources */,
+				99E24FB0554E894560876240 /* [CP] Embed Pods Frameworks */,
+				C973869A536534773F1CDD12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,6 +201,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		99E24FB0554E894560876240 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFCommonFramework/Pods-BFCommonFramework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C973869A536534773F1CDD12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFCommonFramework/Pods-BFCommonFramework-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6927E97F2B49C692BE52E87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BFCommonFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A2490A72079B94A007C6597 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,7 +259,9 @@
 			files = (
 				4A2490B62079B959007C6597 /* ViewController.m in Sources */,
 				4A2490B32079B959007C6597 /* AppDelegate.m in Sources */,
+				4A2490C92079BB5B007C6597 /* BFNetworkManager.m in Sources */,
 				4A2490B02079B959007C6597 /* main.m in Sources */,
+				4A2490CD2079BBDE007C6597 /* BFNetworkSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +377,12 @@
 		};
 		4A2490C32079B959007C6597 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6DBC13E6C27F57B782E2F2A /* Pods-BFCommonFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N8M9ALB4QH;
 				INFOPLIST_FILE = BFCommonFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bf.BFCommonFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,10 +391,12 @@
 		};
 		4A2490C42079B959007C6597 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 843D7ACA2366A0D985B5293E /* Pods-BFCommonFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N8M9ALB4QH;
 				INFOPLIST_FILE = BFCommonFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bf.BFCommonFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,6 +422,7 @@
 				4A2490C42079B959007C6597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
